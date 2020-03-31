@@ -13,7 +13,7 @@ Page({
   bindViewTap() {
     wx.navigateTo({
       url: '../logs/logs',
-    })
+    });
   },
   onLoad() {
     if (app.globalData.userInfo) {
