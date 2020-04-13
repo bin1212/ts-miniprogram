@@ -1,3 +1,4 @@
+import {basrUrl} from './config/base'
 // app.ts
 App<IAppOption>({
   globalData: {},
@@ -10,7 +11,7 @@ App<IAppOption>({
     // 登录
     wx.login({
       success: res => {
-        console.log(res.code)
+        console.log(res.code,basrUrl)
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
       },
     })

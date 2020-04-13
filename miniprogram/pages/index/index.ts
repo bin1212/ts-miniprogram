@@ -42,6 +42,7 @@ Page({
         },
       })
     }
+    console.log('qweqasdsadsw');
   },
   getUserInfo(e: any) {
     console.log(e)
