@@ -1,4 +1,4 @@
-import {basrUrl} from './config/base'
+import Request from './utils/request/request'
 // app.ts
 App<IAppOption>({
   globalData: {},
@@ -7,14 +7,22 @@ App<IAppOption>({
     const logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
-
+    Request.getAUth()
     // 登录
-    wx.login({
-      success: res => {
-        console.log(res.code,basrUrl)
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
-      },
-    })
+    // wx.login({
+    //   success: res => {
+    //     console.log(res.code)
+    //     new Request().fetch({
+    //       method:'GET',
+    //       url:'12',
+    //       param:{}
+    //     })
+    //     .then((res:unknown)=>{
+    //       console.log(res)
+    //     });
+    //     // 发送 res.code 到后台换取 openId, sessionKey, unionId
+    //   },
+    // })
     // 获取用户信息
     wx.getSetting({
       success: res => {
