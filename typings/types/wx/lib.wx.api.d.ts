@@ -7447,6 +7447,7 @@ this.editorCtx.insertImage({
         ): string | ArrayBuffer
     }
     interface GeneralCallbackResult {
+        response: any
         errMsg: string
     }
     interface IBeaconError {

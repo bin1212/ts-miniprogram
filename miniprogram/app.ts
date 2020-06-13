@@ -1,4 +1,4 @@
-import Request from './utils/request/request'
+// import Request from './api/request'
 // app.ts
 App<IAppOption>({
   globalData: {},
@@ -7,22 +7,16 @@ App<IAppOption>({
     const logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
-    Request.getAUth()
-    // 登录
-    // wx.login({
-    //   success: res => {
-    //     console.log(res.code)
-    //     new Request().fetch({
-    //       method:'GET',
-    //       url:'12',
-    //       param:{}
-    //     })
-    //     .then((res:unknown)=>{
-    //       console.log(res)
-    //     });
-    //     // 发送 res.code 到后台换取 openId, sessionKey, unionId
-    //   },
-    // })
+    // Request.getInstance().getAuth()
+    //   .then(res=>{
+    //     console.log(res)
+    //     if(res){
+    //       if(res.token){
+    //         console.log(res.token)
+    //       }
+    //     }
+    //   })
+    // commonRequest.getAuth();
     // 获取用户信息
     wx.getSetting({
       success: res => {
